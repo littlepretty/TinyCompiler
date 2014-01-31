@@ -7,31 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79DCBA14189BE86100047542 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79DCBA13189BE86100047542 /* main.cpp */; };
-		79DCBA16189BE86100047542 /* TinyCompiler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79DCBA15189BE86100047542 /* TinyCompiler.1 */; };
+		79DCBA2E189BF77800047542 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 79DCBA2D189BF77800047542 /* main.c */; };
+		79DCBA30189BF77800047542 /* TinyCompiler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79DCBA2F189BF77800047542 /* TinyCompiler.1 */; };
+		79DCBA39189BF7D700047542 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 79DCBA38189BF7D700047542 /* util.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		79DCBA0E189BE86100047542 /* CopyFiles */ = {
+		79DCBA28189BF77800047542 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				79DCBA16189BE86100047542 /* TinyCompiler.1 in CopyFiles */,
+				79DCBA30189BF77800047542 /* TinyCompiler.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		79DCBA10189BE86100047542 /* TinyCompiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TinyCompiler; sourceTree = BUILT_PRODUCTS_DIR; };
-		79DCBA13189BE86100047542 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		79DCBA15189BE86100047542 /* TinyCompiler.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TinyCompiler.1; sourceTree = "<group>"; };
+		79DCBA2A189BF77800047542 /* TinyCompiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TinyCompiler; sourceTree = BUILT_PRODUCTS_DIR; };
+		79DCBA2D189BF77800047542 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		79DCBA2F189BF77800047542 /* TinyCompiler.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TinyCompiler.1; sourceTree = "<group>"; };
+		79DCBA36189BF7D700047542 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		79DCBA37189BF7D700047542 /* globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		79DCBA38189BF7D700047542 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		79DCBA0D189BE86100047542 /* Frameworks */ = {
+		79DCBA27189BF77800047542 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,27 +45,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		79DCBA07189BE86100047542 = {
+		79DCBA21189BF77800047542 = {
 			isa = PBXGroup;
 			children = (
-				79DCBA12189BE86100047542 /* TinyCompiler */,
-				79DCBA11189BE86100047542 /* Products */,
+				79DCBA2C189BF77800047542 /* TinyCompiler */,
+				79DCBA2B189BF77800047542 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		79DCBA11189BE86100047542 /* Products */ = {
+		79DCBA2B189BF77800047542 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79DCBA10189BE86100047542 /* TinyCompiler */,
+				79DCBA2A189BF77800047542 /* TinyCompiler */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		79DCBA12189BE86100047542 /* TinyCompiler */ = {
+		79DCBA2C189BF77800047542 /* TinyCompiler */ = {
 			isa = PBXGroup;
 			children = (
-				79DCBA13189BE86100047542 /* main.cpp */,
-				79DCBA15189BE86100047542 /* TinyCompiler.1 */,
+				79DCBA2D189BF77800047542 /* main.c */,
+				79DCBA37189BF7D700047542 /* globals.h */,
+				79DCBA36189BF7D700047542 /* util.h */,
+				79DCBA38189BF7D700047542 /* util.c */,
+				79DCBA2F189BF77800047542 /* TinyCompiler.1 */,
 			);
 			path = TinyCompiler;
 			sourceTree = "<group>";
@@ -69,13 +76,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		79DCBA0F189BE86100047542 /* TinyCompiler */ = {
+		79DCBA29189BF77800047542 /* TinyCompiler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79DCBA19189BE86100047542 /* Build configuration list for PBXNativeTarget "TinyCompiler" */;
+			buildConfigurationList = 79DCBA33189BF77800047542 /* Build configuration list for PBXNativeTarget "TinyCompiler" */;
 			buildPhases = (
-				79DCBA0C189BE86100047542 /* Sources */,
-				79DCBA0D189BE86100047542 /* Frameworks */,
-				79DCBA0E189BE86100047542 /* CopyFiles */,
+				79DCBA26189BF77800047542 /* Sources */,
+				79DCBA27189BF77800047542 /* Frameworks */,
+				79DCBA28189BF77800047542 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -83,48 +90,49 @@
 			);
 			name = TinyCompiler;
 			productName = TinyCompiler;
-			productReference = 79DCBA10189BE86100047542 /* TinyCompiler */;
+			productReference = 79DCBA2A189BF77800047542 /* TinyCompiler */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		79DCBA08189BE86100047542 /* Project object */ = {
+		79DCBA22189BF77800047542 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = littlepretty;
 			};
-			buildConfigurationList = 79DCBA0B189BE86100047542 /* Build configuration list for PBXProject "TinyCompiler" */;
+			buildConfigurationList = 79DCBA25189BF77800047542 /* Build configuration list for PBXProject "TinyCompiler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 79DCBA07189BE86100047542;
-			productRefGroup = 79DCBA11189BE86100047542 /* Products */;
+			mainGroup = 79DCBA21189BF77800047542;
+			productRefGroup = 79DCBA2B189BF77800047542 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				79DCBA0F189BE86100047542 /* TinyCompiler */,
+				79DCBA29189BF77800047542 /* TinyCompiler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		79DCBA0C189BE86100047542 /* Sources */ = {
+		79DCBA26189BF77800047542 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79DCBA14189BE86100047542 /* main.cpp in Sources */,
+				79DCBA2E189BF77800047542 /* main.c in Sources */,
+				79DCBA39189BF7D700047542 /* util.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		79DCBA17189BE86100047542 /* Debug */ = {
+		79DCBA31189BF77800047542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -161,7 +169,7 @@
 			};
 			name = Debug;
 		};
-		79DCBA18189BE86100047542 /* Release */ = {
+		79DCBA32189BF77800047542 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -192,14 +200,14 @@
 			};
 			name = Release;
 		};
-		79DCBA1A189BE86100047542 /* Debug */ = {
+		79DCBA34189BF77800047542 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		79DCBA1B189BE86100047542 /* Release */ = {
+		79DCBA35189BF77800047542 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -209,24 +217,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79DCBA0B189BE86100047542 /* Build configuration list for PBXProject "TinyCompiler" */ = {
+		79DCBA25189BF77800047542 /* Build configuration list for PBXProject "TinyCompiler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				79DCBA17189BE86100047542 /* Debug */,
-				79DCBA18189BE86100047542 /* Release */,
+				79DCBA31189BF77800047542 /* Debug */,
+				79DCBA32189BF77800047542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79DCBA19189BE86100047542 /* Build configuration list for PBXNativeTarget "TinyCompiler" */ = {
+		79DCBA33189BF77800047542 /* Build configuration list for PBXNativeTarget "TinyCompiler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				79DCBA1A189BE86100047542 /* Debug */,
-				79DCBA1B189BE86100047542 /* Release */,
+				79DCBA34189BF77800047542 /* Debug */,
+				79DCBA35189BF77800047542 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 79DCBA08189BE86100047542 /* Project object */;
+	rootObject = 79DCBA22189BF77800047542 /* Project object */;
 }
