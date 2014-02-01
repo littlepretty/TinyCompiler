@@ -8,12 +8,21 @@
 
 #include "globals.h"
 #include "util.h"
+#include "scan.h"
 
 
 int line_no = 0;
+
+
 FILE *source;
 FILE *listing;
 FILE *code;
+
+int TraceScan = TRUE;
+int TraceParse = TRUE;
+int TraceAnalyze = TRUE;
+int TraceCode = TRUE;
+int EchoSource = TRUE;
 
 int main(int argc, const char * argv[])
 {
@@ -31,12 +40,16 @@ int main(int argc, const char * argv[])
     source = fopen(pgm, "r");
     
     if (source == NULL) {
-        fprintf(stderr, "File %s not found", pgm);
+        fprintf(stderr, "File %s not found\n", pgm);
         exit(1);
     }
     
     listing = stdout;
     fprintf(listing, "\nTINY COMPILATION: %s\n", pgm);
+    
+    while (getToken() != END_FILE);
+    
+    
     
     return 0;
 }

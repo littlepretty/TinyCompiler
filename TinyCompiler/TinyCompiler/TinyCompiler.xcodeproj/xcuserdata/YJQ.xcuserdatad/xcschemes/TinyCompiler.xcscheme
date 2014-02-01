@@ -57,6 +57,12 @@
             ReferencedContainer = "container:TinyCompiler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "/Users/YJQ/Documents/XcodeDocuments/TinyCompiler/TinyCompiler/TinyCompiler/TinyCompiler/TinyCompiler/sample"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7913E4D4189CF7EB00B24F5A /* scan.c in Sources */ = {isa = PBXBuildFile; fileRef = 7913E4D3189CF7EB00B24F5A /* scan.c */; };
 		79DCBA2E189BF77800047542 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 79DCBA2D189BF77800047542 /* main.c */; };
 		79DCBA30189BF77800047542 /* TinyCompiler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79DCBA2F189BF77800047542 /* TinyCompiler.1 */; };
 		79DCBA39189BF7D700047542 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 79DCBA38189BF7D700047542 /* util.c */; };
@@ -26,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7913E4D0189CF73F00B24F5A /* scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scan.h; sourceTree = "<group>"; };
+		7913E4D3189CF7EB00B24F5A /* scan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scan.c; sourceTree = "<group>"; };
+		7913E4D6189D087300B24F5A /* sample.tny */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.tny; sourceTree = "<group>"; };
 		79DCBA2A189BF77800047542 /* TinyCompiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TinyCompiler; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DCBA2D189BF77800047542 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		79DCBA2F189BF77800047542 /* TinyCompiler.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TinyCompiler.1; sourceTree = "<group>"; };
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7913E4D5189CFD5900B24F5A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				79DCBA2F189BF77800047542 /* TinyCompiler.1 */,
+				7913E4D6189D087300B24F5A /* sample.tny */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		79DCBA21189BF77800047542 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +77,13 @@
 		79DCBA2C189BF77800047542 /* TinyCompiler */ = {
 			isa = PBXGroup;
 			children = (
+				7913E4D5189CFD5900B24F5A /* SupportingFiles */,
 				79DCBA2D189BF77800047542 /* main.c */,
 				79DCBA37189BF7D700047542 /* globals.h */,
 				79DCBA36189BF7D700047542 /* util.h */,
 				79DCBA38189BF7D700047542 /* util.c */,
-				79DCBA2F189BF77800047542 /* TinyCompiler.1 */,
+				7913E4D0189CF73F00B24F5A /* scan.h */,
+				7913E4D3189CF7EB00B24F5A /* scan.c */,
 			);
 			path = TinyCompiler;
 			sourceTree = "<group>";
@@ -125,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DCBA2E189BF77800047542 /* main.c in Sources */,
+				7913E4D4189CF7EB00B24F5A /* scan.c in Sources */,
 				79DCBA39189BF7D700047542 /* util.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,21 +22,41 @@
 #define FALSE 0
 #endif
 
-#define MAX_RESERVERED 8
+#define MAX_RESERVERED_WORDS 8
+
 
 typedef enum
 {
+
     END_FILE, ERROR,
+    /*
+     *  reserved words
+     */
     IF, THEN, ELSE, END, REPEAT, UNTIL, READ, WRITE,
+    /*
+     *  multicharacter tokens
+     */
     ID, NUMBER,
+    /*
+     *  operator and special symbols
+     */
     ASSIGN, EQ, LT, PLUS, MINUS, TIMES, OVER, LPAREN, RPAREN, SEMI
+    
 } TokenType;
 
-extern FILE *source;
-extern FILE *listing;
-extern FILE *code;
-
 extern int line_no;
+
+extern FILE *source;    //!<  file handler for program file
+
+extern FILE *listing;   //!<  file handler for listing compile output
+
+extern FILE *code;  //!<  file handler for code on TM simulator
+
+
+
+/************************************************************/
+/*                  syntax tree for parsing                 */
+/************************************************************/
 
 typedef enum {StmtK, ExpK} NodeKind;
 typedef enum {IfK, RepeatK, AssignK, ReadK, WriteK} StmtKind;
@@ -46,7 +66,6 @@ typedef enum {Void, Integer, Boolean} ExpType;
 
 #define MAX_CHILDREN 3
 
-
 typedef struct treeNode
 {
     struct treeNode *children[MAX_CHILDREN];
@@ -54,6 +73,7 @@ typedef struct treeNode
     
     int line_no;
     NodeKind node_kind;
+    
     union {
         StmtKind stmt; ExpKind exp;
     } kind;
@@ -64,18 +84,20 @@ typedef struct treeNode
         char *name;
     } attr;
     
-    ExpType type;
+    ExpType type;   //!< for type checking
     
 } TreeNode;
 
 
+extern int EchoSource;
 
+extern int TraceScan;
 
+extern int TraceParse;
 
+extern int TraceAnalyze;
 
-
-
-
+extern int TraceCode;
 
 
 #endif
