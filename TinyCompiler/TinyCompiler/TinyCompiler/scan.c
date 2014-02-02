@@ -69,7 +69,7 @@ static struct {
 TokenType reservedLookup(const char *tokenString)
 {
     for (int i =0; i < MAX_RESERVERED_WORDS; i++) {
-        if (strcmp(tokenString, reservedWords[i].str)) {
+        if (!strcmp(tokenString, reservedWords[i].str)) {
             return reservedWords[i].token;
         }
     }

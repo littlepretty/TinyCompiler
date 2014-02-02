@@ -9,10 +9,13 @@
 #include "globals.h"
 #include "util.h"
 #include "scan.h"
+#include "parse.h"
 
+#define NO_PARSE FALSE
+#define NO_ANALYZE FALSE
+#define NO_CODE FALSE
 
 int line_no = 0;
-
 
 FILE *source;
 FILE *listing;
@@ -23,13 +26,14 @@ int TraceParse = TRUE;
 int TraceAnalyze = TRUE;
 int TraceCode = TRUE;
 int EchoSource = TRUE;
+int Error = FALSE;
 
 int main(int argc, const char * argv[])
 {
     
     char pgm[128];
     if (argc != 2) {
-        fprintf(stderr, "usage: %s <filename>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <Filename>\n", argv[0]);
     }
     
     strcpy(pgm, argv[1]);
@@ -40,16 +44,27 @@ int main(int argc, const char * argv[])
     source = fopen(pgm, "r");
     
     if (source == NULL) {
-        fprintf(stderr, "File %s not found\n", pgm);
+        fprintf(stderr, "File %s Not Found\n", pgm);
         exit(1);
     }
     
     listing = stdout;
     fprintf(listing, "\nTINY COMPILATION: %s\n", pgm);
     
-    while (getToken() != END_FILE);
+#if NO_PARSE
+    while (getToken() != END_FILE); //  first pass for scan
+#else
     
+    TreeNode *syntaxTree = parse();
     
+    if (syntaxTree) {
+        fprintf(listing, "\nSyntax Tree:\n");
+        printTree(syntaxTree);
+    }
+
+#endif
+    
+    fclose(source);
     
     return 0;
 }

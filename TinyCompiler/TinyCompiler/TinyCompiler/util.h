@@ -14,5 +14,13 @@
 
 void printToken(TokenType token, const char* tokenString);
 
+TreeNode* newExpNode(ExpKind kind);
+TreeNode* newStmtNode(StmtKind kind);
+
+char* copyString(const char *s);
+
+void printTree(TreeNode *tree);
+
+
 
 #endif
