@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		791103E9189E58C600874CBD /* parse.c in Sources */ = {isa = PBXBuildFile; fileRef = 791103E8189E58C600874CBD /* parse.c */; };
 		7913E4D4189CF7EB00B24F5A /* scan.c in Sources */ = {isa = PBXBuildFile; fileRef = 7913E4D3189CF7EB00B24F5A /* scan.c */; };
+		795FF24E18A4A20200C4ED36 /* symtab.c in Sources */ = {isa = PBXBuildFile; fileRef = 795FF24D18A4A20200C4ED36 /* symtab.c */; };
+		795FF25118A4B7BC00C4ED36 /* analyze.c in Sources */ = {isa = PBXBuildFile; fileRef = 795FF25018A4B7BC00C4ED36 /* analyze.c */; };
 		79DCBA2E189BF77800047542 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 79DCBA2D189BF77800047542 /* main.c */; };
 		79DCBA30189BF77800047542 /* TinyCompiler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79DCBA2F189BF77800047542 /* TinyCompiler.1 */; };
 		79DCBA39189BF7D700047542 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = 79DCBA38189BF7D700047542 /* util.c */; };
@@ -33,6 +35,11 @@
 		7913E4D0189CF73F00B24F5A /* scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scan.h; sourceTree = "<group>"; };
 		7913E4D3189CF7EB00B24F5A /* scan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scan.c; sourceTree = "<group>"; };
 		7913E4D6189D087300B24F5A /* sample.tny */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.tny; sourceTree = "<group>"; };
+		7953CD0518A081F900D1CC22 /* tiny.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = tiny.l; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		795FF24C18A4A16000C4ED36 /* symtab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symtab.h; sourceTree = "<group>"; };
+		795FF24D18A4A20200C4ED36 /* symtab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = symtab.c; sourceTree = "<group>"; };
+		795FF24F18A4B75800C4ED36 /* analyze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = analyze.h; sourceTree = "<group>"; };
+		795FF25018A4B7BC00C4ED36 /* analyze.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = analyze.c; sourceTree = "<group>"; };
 		79DCBA2A189BF77800047542 /* TinyCompiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TinyCompiler; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DCBA2D189BF77800047542 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		79DCBA2F189BF77800047542 /* TinyCompiler.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TinyCompiler.1; sourceTree = "<group>"; };
@@ -80,6 +87,7 @@
 		79DCBA2C189BF77800047542 /* TinyCompiler */ = {
 			isa = PBXGroup;
 			children = (
+				7953CD0518A081F900D1CC22 /* tiny.l */,
 				7913E4D5189CFD5900B24F5A /* SupportingFiles */,
 				79DCBA2D189BF77800047542 /* main.c */,
 				79DCBA37189BF7D700047542 /* globals.h */,
@@ -89,6 +97,10 @@
 				7913E4D3189CF7EB00B24F5A /* scan.c */,
 				791103E7189E588800874CBD /* parse.h */,
 				791103E8189E58C600874CBD /* parse.c */,
+				795FF24C18A4A16000C4ED36 /* symtab.h */,
+				795FF24D18A4A20200C4ED36 /* symtab.c */,
+				795FF24F18A4B75800C4ED36 /* analyze.h */,
+				795FF25018A4B7BC00C4ED36 /* analyze.c */,
 			);
 			path = TinyCompiler;
 			sourceTree = "<group>";
@@ -145,6 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DCBA2E189BF77800047542 /* main.c in Sources */,
+				795FF24E18A4A20200C4ED36 /* symtab.c in Sources */,
+				795FF25118A4B7BC00C4ED36 /* analyze.c in Sources */,
 				7913E4D4189CF7EB00B24F5A /* scan.c in Sources */,
 				79DCBA39189BF7D700047542 /* util.c in Sources */,
 				791103E9189E58C600874CBD /* parse.c in Sources */,

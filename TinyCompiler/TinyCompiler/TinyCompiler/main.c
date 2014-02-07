@@ -10,6 +10,10 @@
 #include "util.h"
 #include "scan.h"
 #include "parse.h"
+#include "analyze.h"
+
+#include "symtab.h"
+
 
 #define NO_PARSE FALSE
 #define NO_ANALYZE FALSE
@@ -61,6 +65,18 @@ int main(int argc, const char * argv[])
         fprintf(listing, "\nSyntax Tree:\n");
         printTree(syntaxTree);
     }
+    
+#if NO_ANALYZE
+#else
+    if (!Error) {
+        fprintf(listing, "\nBuilding Symbol Table...\n");
+        buildSymTab(syntaxTree);
+        fprintf(listing, "\nChecking Types...\n");
+        typeCheck(syntaxTree);
+        fprintf(listing, "\nType Checking Finished\n");
+    }
+    
+#endif
 
 #endif
     
