@@ -13,7 +13,8 @@
 #include "analyze.h"
 
 #include "symtab.h"
-
+#include "code.h"
+#include "cgen.h"
 
 #define NO_PARSE FALSE
 #define NO_ANALYZE FALSE
@@ -76,8 +77,26 @@ int main(int argc, const char * argv[])
         fprintf(listing, "\nType Checking Finished\n");
     }
     
-#endif
 
+#if NO_CODE
+#else
+    if (!Error) {
+        
+        unsigned long fnlen = strcspn(pgm, ".");
+        char *codeFile = calloc(fnlen+4, sizeof(char));
+        strncpy(codeFile, pgm, fnlen);
+        strcat(codeFile, ".tm");
+        code = fopen(codeFile, "w");
+        if (code == NULL) {
+            printf("Unable to Open %s/n", codeFile);
+            exit(1);
+        }
+        codeGen(syntaxTree, codeFile);
+        fclose(code);
+    }
+    
+#endif
+#endif
 #endif
     
     fclose(source);
