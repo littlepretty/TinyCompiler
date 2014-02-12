@@ -1,5 +1,5 @@
 * TINY Compilation to TM Code
-* File: /Users/YJQ/Documents/XcodeDocuments/TinyCompiler/TinyCompiler/TinyCompiler/TinyCompiler/TinyCompiler/sample.tm
+* File: TinyCompiler/TinyCompiler/sample.tm
 * Standard Prelude:
   0:    LD 6,0(0) 	load max address from memory location 0
   1:    ST 0,0(0) 	clear loaction 0

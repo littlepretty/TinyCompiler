@@ -6,10 +6,13 @@
 //  Copyright (c) 2014 littlepretty. All rights reserved.
 //
 
-
+#include "globals.h"
+#include "util.h"
 #include "scan.h"
 #include "parse.h"
 #include "analyze.h"
+
+#include "symtab.h"
 #include "code.h"
 #include "cgen.h"
 
