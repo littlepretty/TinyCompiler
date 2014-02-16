@@ -100,8 +100,7 @@ TokenType getToken()
                 } else if (currentChar == '{') {
                     save = FALSE;
                     state = IN_COMMENT;
-                }
-                else if (currentChar == ' ' || currentChar == '\t'
+                } else if (currentChar == ' ' || currentChar == '\t'
                     || currentChar == '\n'){
                     save = FALSE;
                 } else {
